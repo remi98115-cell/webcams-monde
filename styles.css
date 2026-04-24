@@ -162,6 +162,30 @@ body::after {
     box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
 }
 
+.filter-btn.filter-conflict {
+    border-color: rgba(255, 80, 80, 0.35);
+    color: #ffb3b3;
+}
+.filter-btn.filter-conflict.active {
+    background: linear-gradient(135deg, #ff3344, #8b1c2a);
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(255, 50, 70, 0.35);
+}
+
+.conflict-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #ff3344;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
 .stats {
     text-align: center;
     color: var(--text-dim);
