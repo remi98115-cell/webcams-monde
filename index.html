@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcams du Monde — Live Streaming 24/7</title>
+    <meta name="description" content="Découvrez le monde entier en direct grâce à des webcams live 24h/24 : villes, nature, faune sauvage et plus encore.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+</head>
+<body>
+
+<header class="hero">
+    <div class="hero-inner">
+        <h1>🌍 Webcams du Monde</h1>
+        <p class="subtitle">Explorez la planète en direct — villes, nature, faune sauvage</p>
+
+        <div class="controls">
+            <div class="search-wrapper">
+                <span class="search-icon">🔎</span>
+                <input type="text" id="search" placeholder="Rechercher une ville, un pays, un lieu...">
+            </div>
+
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-region="all">🌐 Toutes</button>
+                <button class="filter-btn" data-region="europe">🇪🇺 Europe</button>
+                <button class="filter-btn" data-region="americas">🌎 Amériques</button>
+                <button class="filter-btn" data-region="asia">🌏 Asie</button>
+                <button class="filter-btn" data-region="oceania">🏝️ Océanie</button>
+                <button class="filter-btn" data-region="africa">🦁 Afrique</button>
+                <button class="filter-btn" data-region="nature">🌲 Nature & Faune</button>
+                <button class="filter-btn" data-region="space">🚀 Espace</button>
+            </div>
+
+            <div class="stats">
+                <span id="count">0</span> webcams disponibles
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div id="webcam-grid" class="grid"></div>
+    <p id="no-results" class="no-results hidden">🔍 Aucune webcam trouvée pour cette recherche.</p>
+</main>
+
+<!-- Modal pour plein écran -->
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
+        <div class="modal-header">
+            <h2 id="modal-title"></h2>
+            <p id="modal-location"></p>
+        </div>
+        <div class="modal-video" id="modal-video"></div>
+        <div class="modal-footer">
+            <p id="modal-desc"></p>
+            <a id="modal-source" target="_blank" rel="noopener" class="source-link">Ouvrir sur YouTube ↗</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Les flux proviennent de diffusions publiques YouTube (EarthCam, Skyline Webcams, NASA, Explore.org, etc.).</p>
+    <p class="note">Certaines webcams peuvent être temporairement hors ligne. Cliquez sur une carte pour la visionner en grand.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
