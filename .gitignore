@@ -1,4 +1,7 @@
-queries.tsv
+queries*.tsv
+all_queries.tsv
+*.json
+*.py
 *.log
 .DS_Store
 Thumbs.db
