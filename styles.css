@@ -162,6 +162,17 @@ body::after {
     box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
 }
 
+.filter-btn.filter-france {
+    border-color: rgba(0, 85, 164, 0.5);
+    color: #c8d8ff;
+}
+.filter-btn.filter-france.active {
+    background: linear-gradient(135deg, #0055A4, #fff 50%, #EF4135);
+    color: #1a1a3a;
+    text-shadow: 0 0 6px rgba(255,255,255,0.8);
+    box-shadow: 0 5px 20px rgba(0, 85, 164, 0.35);
+}
+
 .filter-btn.filter-conflict {
     border-color: rgba(255, 80, 80, 0.35);
     color: #ffb3b3;

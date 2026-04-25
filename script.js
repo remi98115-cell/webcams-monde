@@ -1345,7 +1345,9 @@ function renderGrid() {
     const filtered = WEBCAMS.filter(w => {
         const matchesRegion =
             currentRegion === 'all' ||
-            (currentRegion === 'conflict' ? w.conflict : w.region === currentRegion);
+            (currentRegion === 'conflict' ? w.conflict :
+             currentRegion === 'france' ? /France|R[eé]union|Guadeloupe|Martinique|Polyn[eé]sie|Nouvelle-Cal[eé]donie|Guyane|Monaco/.test(w.country) :
+             w.region === currentRegion);
         const matchesSearch = !search ||
             w.name.toLowerCase().includes(search) ||
             w.city.toLowerCase().includes(search) ||
