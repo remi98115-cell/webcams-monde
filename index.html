@@ -46,6 +46,41 @@
     <p id="no-results" class="no-results hidden">🔍 Aucune webcam trouvée pour cette recherche.</p>
 </main>
 
+<!-- Popup de bienvenue (1ère visite) -->
+<div id="welcome" class="welcome hidden" role="dialog" aria-modal="true">
+    <div class="welcome-backdrop"></div>
+    <div class="welcome-card">
+        <div class="welcome-emoji">🌍</div>
+        <h2>Bienvenue sur Webcams du Monde</h2>
+        <p class="welcome-lead">Plus de <strong id="welcome-count">1100</strong> webcams en direct 24/7 — villes, nature, espace, zones de conflit, France &amp; DOM-TOM.</p>
+
+        <div class="welcome-section">
+            <h3>🎬 Comment ça marche</h3>
+            <ul>
+                <li>Les vidéos jouent directement dans les miniatures (en muet)</li>
+                <li>Cliquez sur une carte pour la voir en grand avec le son</li>
+                <li>Filtrez par région ou cherchez une ville</li>
+            </ul>
+        </div>
+
+        <div class="welcome-section welcome-warning">
+            <h3>⚠️ Pour une expérience sans publicités</h3>
+            <p>Les flux passent par YouTube qui peut afficher des pubs avant les vidéos. <strong>Recommandé&nbsp;:</strong></p>
+            <ul>
+                <li><strong>Brave</strong> (navigateur avec bloqueur intégré)</li>
+                <li><strong>Firefox + uBlock Origin</strong> (extension gratuite)</li>
+                <li><strong>Chrome + uBlock Origin</strong> (extension gratuite)</li>
+            </ul>
+            <p class="welcome-note">Sans bloqueur, vous verrez parfois des pubs dans les miniatures.</p>
+        </div>
+
+        <button id="welcome-close" class="welcome-btn">J'ai compris, explorons le monde</button>
+        <label class="welcome-dontshow">
+            <input type="checkbox" id="welcome-dontshow"> Ne plus afficher
+        </label>
+    </div>
+</div>
+
 <!-- Modal pour plein écran -->
 <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-backdrop"></div>
